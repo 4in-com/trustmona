@@ -71,6 +71,7 @@ Look for:
 - Fake job offers
 - Requests for upfront fees
 - WhatsApp / Telegram scams
+- is it true the user is on the platform he/she mentioned
 - Impersonation
 - Crypto or investment fraud
 
@@ -78,7 +79,7 @@ Return ONLY valid JSON:
 {
   "risk_level": "low | medium | high",
   "risk_score": 0-100,
-  "reasons": ["short reason 1", "short reason 2"]
+  "reasons": ["short reason 1", "short reason 2","long explaination on what to do to avoid sacm from this,it need to start with What To Do:here help explanation"]
 }
 
 Message:
