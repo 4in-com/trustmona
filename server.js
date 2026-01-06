@@ -61,7 +61,7 @@ app.post("/report", async (req, res) => {
 });
 
 
-// 🧠 AI TEXT SCAM ANALYSIS
+//  AI TEXT SCAM ANALYSIS
 async function aiAnalyzeText(message) {
   const prompt = `
 You are TrustMona AI, specialized in detecting scam messages.
@@ -77,8 +77,8 @@ Look for:
 
 Return ONLY valid JSON:
 {
-  "whatToDo":"explaination on what to do to avoid scams like this",
-  "isItNew":"short example of a person that had been scamed some way and his/her country name",
+  "whatToDo": "explaination on what to do to avoid scams like this",
+  "isItNew": "short example of a person that had been scamed some way and his/her country name",
   "risk_level": "low | medium | high",
   "risk_score": 0-100,
   "reasons": ["short reason 1","short reason 2","short reason 3"], 
@@ -170,12 +170,14 @@ app.post("/scan-text", async (req, res) => {
   res.json({
     brand: "TrustMona",
     status:
-      finalScore < 40 ? "🚨 High Scam Risk" :
-      finalScore < 70 ? "⚠️ Medium Risk" :
-      "✅ Low Risk",
+      finalScore < 40 ? " High Scam Risk" :
+      finalScore < 70 ? " Medium Risk" :
+      " Low Risk",
     monaScore: finalScore,
     aiRiskLevel: aiResult.risk_level,
     reasons: aiResult.reasons,
+    whatToDo: aiResult.whatToDo,
+    isItNew: aiResult.isItNew,
     type: "message_scan",
     poweredBy: "TrustMona AI"
   });
@@ -225,9 +227,9 @@ app.post("/scan", async (req, res) => {
     brand: "TrustMona",
     domain,
     status:
-      finalScore < 40 ? "🚨 High Scam Risk" :
-      finalScore < 70 ? "⚠️ Medium Risk" :
-      "✅ Low Risk",
+      finalScore < 40 ? " High Scam Risk" :
+      finalScore < 70 ? " Medium Risk" :
+      "Low Risk",
     monaScore: Math.round(finalScore),
     aiRiskLevel: aiResult.risk_level,
     reasons: [...reasons, ...aiResult.reasons],
