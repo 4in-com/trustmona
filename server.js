@@ -79,7 +79,9 @@ Return ONLY valid JSON:
 {
   "risk_level": "low | medium | high",
   "risk_score": 0-100,
-  "reasons": ["short reason 1", "short reason 2","short example from a person that had been scamed some way and his/her country name","long explaination on what to do to avoid sacm from this,it need to start with What To Do:here help explanation"]
+  "reasons": ["short reason 1","short reason 2","short reason 3"],
+  "whatToDo":"explaination on what to do to avoid scams like this",
+  "isItNew":"short example of a person that had been scamed some way and his/her country name"
 }
 
 Message:
