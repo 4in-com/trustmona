@@ -78,7 +78,7 @@ Look for:
 Return ONLY valid JSON:
 {
   "whatToDo": "explaination on what to do to avoid scams like this",
-  "isItNew": "short example of a person that had been scamed some way and his/her country name and the convasation they had which read to a scam and add like to find more visit :a real direct link at a report about this,
+  "isItNew": "short example of a person that had been scamed some way and his/her country name and the convasation they had which read to a scam and add like to find more visit :a real direct link at a report about this like this https://website.com/scam/payusemony,
   "risk_level": "low | medium | high",
   "risk_score": 0-100,
   "reasons": ["short reason 1","short reason 2","short reason 3"], 
